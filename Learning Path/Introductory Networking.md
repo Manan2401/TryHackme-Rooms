@@ -1,6 +1,7 @@
 # TryHackMe Learning Path: Introductory Networking
 
-This learning path covers the fundamentals of web application penetration testing. Each task builds upon the previous one, so it's recommended to complete them in order.
+The aim of this room is to provide a beginner's introduction to the basic principles of networking. Networking is a massive topic, so this really will just be a brief overview; however, it will hopefully give you some foundational knowledge of the topic, which you can build upon for yourself.
+
 
 ## Task 1: Introduction:
 Read and Accept
