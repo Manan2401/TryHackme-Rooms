@@ -1,232 +1,211 @@
-# Nmap-TryHackMe
 
-## Introduction
 
-### Deploy the machine!
-<details>
-  <summary>Answer</summary>
+Task 1  Deploy :
+----
 
-  ```
-   No Answer needed
-  ```
-</details>
+Deploy the attached VM
+>No need to answer
 
+----
 
-### What networking constructs are used to direct traffic to the right application on a server?
-<details>
-  <summary>Answer</summary>
+Task 2  Introduction
+----
 
-  ```
-   Ports
-  ```
-</details>
+What networking constructs are used to direct traffic to the right application on a server?
+>PORTS
 
-### How many of these are available on any network-enabled computer?
-<details>
-  <summary>Answer</summary>
+How many of these are available on any network-enabled computer?
+>65535
 
-  ```
-   65535
-  ```
-</details>
+[Research] How many of these are considered "well-known"? (These are the "standard" numbers mentioned in the task)
+>1024
 
-### [Research] How many of these are considered "well-known"? (These are the "standard" numbers mentioned in the task)
-<details>
-  <summary>Answer</summary>
+----
 
-  ```
-   1024
-  ```
-</details>
+Task 3  Nmap Switches :
+----
 
-<br></br>
-## Nmap Switches
-### What is the first switch listed in the help menu for a 'Syn Scan' (more on this later!)?
-<details>
-  <summary>Answer</summary>
+What is the first switch listed in the help menu for a 'Syn Scan' (more on this later!)?
+>-sS
 
-  ```
-   -sS
-  ```
-</details>
+Which switch would you use for a "UDP scan"?
+>-sU
 
-### Which switch would you use for a "UDP scan"?
-<details>
-  <summary>Answer</summary>
+If you wanted to detect which operating system the target is running on, which switch would you use?
+>-O
 
-  ```
-   -sU
-  ```
-</details>
+Nmap provides a switch to detect the version of the services running on the target. What is this switch?
+>-sV
 
-### If you wanted to detect which operating system the target is running on, which switch would you use?
-<details>
-  <summary>Answer</summary>
+The default output provided by nmap often does not provide enough information for a pentester. How would you increase the verbosity?
+>-v
 
-  ```
-   -O
-  ```
-</details>
+Verbosity level one is good, but verbosity level two is better! How would you set the verbosity level to two?
+(Note: it's highly advisable to always use at least this option)
+>-vv
 
-### Nmap provides a switch to detect the version of the services running on the target. What is this switch?
-<details>
-  <summary>Answer</summary>
+We should always save the output of our scans -- this means that we only need to run the scan once (reducing network traffic and thus chance of detection), and gives us a reference to use when writing reports for clients.
+What switch would you use to save the nmap results in three major formats?
+>-oA
 
-  ```
-   -sV
-  ```
-</details>
+What switch would you use to save the nmap results in a "normal" format?
+>-oN
 
-### The default output provided by nmap often does not provide enough information for a pentester. How would you increase the verbosity?
+A very useful output format: how would you save results in a "grepable" format?
+>-oG
 
-<details>
-  <summary>Answer</summary>
+Sometimes the results we're getting just aren't enough. If we don't care about how loud we are, we can enable "aggressive" mode. This is a shorthand switch that activates service detection, operating system detection, a traceroute and common script scanning.
+How would you activate this setting?
+>-A
 
-  ```
-   -v
-  ```
-</details>
+Nmap offers five levels of "timing" template. These are essentially used to increase the speed your scan runs at. Be careful though: higher speeds are noisier, and can incur errors!
+How would you set the timing template to level 5?
+>-T5
 
-### Verbosity level one is good, but verbosity level two is better! How would you set the verbosity level to two?
+We can also choose which port(s) to scan.
+How would you tell nmap to only scan port 80?
+>-p 80
 
-<details>
-  <summary>Answer</summary>
+How would you tell nmap to scan ports 1000-1500?
+>-p 1000-1500
 
-  ```
-   -vv
-  ```
-</details>
+A very useful option that should not be ignored:
+How would you tell nmap to scan all ports
+>-p-
 
-### What switch would you use to save the nmap results in three major formats?
+How would you activate a script from the nmap scripting library (lots more on this later!)?
+>-script
 
-<details>
-  <summary>Answer</summary>
+How would you activate all of the scripts in the "vuln" category?
+>-script=vuln
 
-  ```
-   -oA
-  ```
-</details>
+----
 
-### What switch would you use to save the nmap results in a "normal" format?
+Task 4  Scan Types Overview :
+----
 
-<details>
-  <summary>Answer</summary>
+Read the Scan Types Introduction.
+>No need to answer
 
-  ```
-   -oN
-  ```
-</details>
+----
 
-### A very useful output format: how would you save results in a "grepable" format?
+Task 5  Scan Types TCP Connect Scans :
+----
 
-<details>
-  <summary>Answer</summary>
+Which RFC defines the appropriate behaviour for the TCP protocol?
+>RFC 793
 
-  ```
-   -oG
-  ```
-</details>
+If a port is closed, which flag should the server send back to indicate this?
+>RST
 
-### How would you activate this setting?
+----
 
-<details>
-  <summary>Answer</summary>
+Task 6  Scan Types SYN Scans :
+----
 
-  ```
-   -A
-  ```
-</details>
+There are two other names for a SYN scan, what are they? 
+>Half-Open , Stealth
 
-### How would you set the timing template to level 5?
+Can Nmap use a SYN scan without Sudo permissions (Y/N)?
+>N
 
-<details>
-  <summary>Answer</summary>
+----
 
-  ```
-   -T5
-  ```
-</details>
+Task 7  Scan Types UDP Scans :
+----
 
-### How would you tell nmap to only scan port 80?
+If a UDP port doesn't respond to an Nmap scan, what will it be marked as?
+>open|filtered
 
-<details>
-  <summary>Answer</summary>
+When a UDP port is closed, by convention the target should send back a "port unreachable" message. Which protocol would it use to do so?
+>ICMP
 
-  ```
-   -p 80
-  ```
-</details>
+----
 
-### How would you tell nmap to scan ports 1000-1500?
+Task 8  Scan Types NULL, FIN and Xmas :
+----
 
-<details>
-  <summary>Answer</summary>
+Which of the three shown scan types uses the URG flag?
+>XMAS
 
-  ```
-  -p 1000-1500
-  ```
-</details>
+Why are NULL, FIN and Xmas scans generally used?
+>FIREWALL EVASION
 
-### How would you tell nmap to scan all ports?
+Which common OS may respond to a NULL, FIN or Xmas scan with a RST for every port?
+>MICROSOFT WINDOWS
 
-<details>
-  <summary>Answer</summary>
+----
 
-  ```
-  -p-
-  ```
-</details>
+Task 9  Scan Types ICMP Network Scanning :
+----
 
-### How would you activate a script from the nmap scripting library (lots more on this later!)?
+How would you perform a ping sweep on the 172.16.x.x network (Netmask: 255.255.0.0) using Nmap? (CIDR notation)
+>nmap -sn 172.16.0.0/16
 
-<details>
-  <summary>Answer</summary>
+----
 
-  ```
-  --script
-  ```
-</details>
+Task 10  NSE Scripts Overview :
+----
 
-### How would you activate all of the scripts in the "vuln" category?
+What language are NSE scripts written in?
+>LUA
 
-<details>
-  <summary>Answer</summary>
+Which category of scripts would be a very bad idea to run in a production environment?
+>INTRUSIVE
 
-  ```
- --script=vuln
-  ```
-</details>
+----
 
-<br></br>
-## [Scan Types] Overview
-<details>
-  <summary>Answer</summary>
+Task 11  NSE Scripts Working with the NSE :
+----
 
-  ```
-   No Answer needed
-  ```
-</details>
+What optional argument can the ftp-anon.nse script take?
+>MAXLIST
 
-<br></br>
-## [Scan Types] TCP Connect Scans
-### Which RFC defines the appropriate behaviour for the TCP protocol?
+----
 
-<details>
-  <summary>Answer</summary>
+Task 12  NSE Scripts Searching for Scripts :
+----
 
-  ```
-  RFC 793
-  ```
-</details>
+Search for "smb" scripts in the /usr/share/nmap/scripts/ directory using either of the demonstrated methods.
+What is the filename of the script which determines the underlying OS of the SMB server?
+>smb-os-discovery.nse
 
-### If a port is closed, which flag should the server send back to indicate this?
+Read through this script. What does it depend on?
+>smb-brute
 
-<details>
-  <summary>Answer</summary>
+----
 
-  ```
-   RST
-  ```
-</details>
+Task 13  Firewall Evasion :
+----
 
+Which simple (and frequently relied upon) protocol is often blocked, requiring the use of the -Pn switch?
+>ICMP
 
+[Research] Which Nmap switch allows you to append an arbitrary length of random data to the end of packets?
+>--data-length
+
+----
+
+Task 14  Practical :
+----
+
+Does the target (MACHINE_IP)respond to ICMP (ping) requests (Y/N)?
+>N
+
+Perform an Xmas scan on the first 999 ports of the target -- how many ports are shown to be open or filtered?
+>999
+
+There is a reason given for this -- what is it
+Note: The answer will be in your scan results. Think carefully about which switches to use -- and read the hint before asking for help!
+>NO RESPONSE
+
+Perform a TCP SYN scan on the first 5000 ports of the target -- how many ports are shown to be open?
+>5
+
+Open Wireshark (see Cryillic's Wireshark Room for instructions) and perform a TCP Connect scan against port 80 on the target, monitoring the results. Make sure you understand what's going on.
+>No need to answer
+
+Deploy the ftp-anon script against the box. Can Nmap login successfully to the FTP server on port 21? (Y/N)
+>Y
+
+----
