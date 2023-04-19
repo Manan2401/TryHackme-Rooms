@@ -102,6 +102,4 @@ THM{SU_USER2}
 
 ## Task 7 - Conclusions & Summaries
 
-> Nice work! This room was quite theory-heavy and covered quite a range of the fundamentals in getting you familiar with Linux. To quickly recap, this room taught you:
-
-[[THM-Linux-Fundamentals-3]]
+> Nice work! This room was quite theory-heavy and covered quite a range of the fundamentals in getting you familiar with Linux. See you next in [[THM-Linux-Fundamentals-3]]
