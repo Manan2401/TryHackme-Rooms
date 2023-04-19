@@ -18,12 +18,12 @@ ssh tryhackme@10.10.231.129
 
 ## Task 3 - Introduction to Flags and Switches
 
-> What directional arrow key to go down a man page?
+> 1. What directional arrow key to go down a man page?
 ```
 down
 ```
 
-> What flag would we use to display the output in a human readable way?
+> 2. What flag would we use to display the output in a human readable way?
 ```shell
 ls -h
 ```
@@ -32,22 +32,22 @@ ls -h
 
 ## Task 4 - Filesystem Interaction Continued
 
-> How to create a file "newnote"?
+> 1. How to create a file "newnote"?
 ```shell
 touch newnote
 ```
 
-> On the deployable machine, what is the file type of "unknown1" in "tryhackme's" home directory?
+> 2. On the deployable machine, what is the file type of "unknown1" in "tryhackme's" home directory?
 ```shell
 ASCII text
 ```
 
-> How would you move "myfile" to "myfolder"?
+> 3. How would you move "myfile" to "myfolder"?
 ```shell
 mv myfile myfolder
 ```
 
-> What are the contents of "myfile"?
+> 4. What are the contents of "myfile"?
 ```shell
 THM{FILESYSTEM}
 ```
@@ -64,17 +64,17 @@ drwxr-xr-x 2 tryhackme tryhackme 4.0K May  4  2021 myfolder
 -rw-r--r-- 1 tryhackme tryhackme   17 May  4  2021 unknown1
 ```
 
-> Who is the owner of "important"?
+> 1. Who is the owner of "important"?
 ```
 user2
 ```
 
-> Command to switch to "user2"?
+> 2. Command to switch to "user2"?
 ```shell
 su user2
 ```
 
-> Switching to that user, whats the contents of "important"?
+> 3. Switching to that user, whats the contents of "important"?
 ```
 THM{SU_USER2}
 ```
@@ -83,17 +83,17 @@ THM{SU_USER2}
 
 ## Task 6 - Common Directories
 
-> What is the directory we'd expect logs to be in?
+> 1. What is the directory we'd expect logs to be in?
 ```
 /var/log
 ```
 
-> Which directory is similar to how ram works?
+> 2. Which directory is similar to how ram works?
 ```
 /tmp
 ```
 
-> Home directory of the root user?
+> 3. Home directory of the root user?
 ```
 /root
 ```
