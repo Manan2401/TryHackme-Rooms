@@ -49,18 +49,8 @@ THM{TEXT_EDITORS}
 
 - Serving files from your host - WEB
 
-  - > Ubuntu machines come pre-packaged with python3. Python helpfully 
-
-    > provides a lightweight and easy-to-use module called "HTTPServer". This 
-    > module turns your computer into a quick and easy web server that you can
-    >  use to serve your own files, where they can then be downloaded by 
-    > another computing using commands such as `curl` and `wget`.
-
   - All we need to start the module is `python3 -m  http.server`
-    
-    - Will start from the working directory by default. See man page for HTTPServer.
-    
-    - We need the full path to any file we want to download using ```wget``` .
+
   
   > Start a web server in the tryhackme home directory and wget .flag.txt. What is the flag?
   
@@ -148,7 +138,7 @@ catsanddogs.jpg
 
 ## Task 9 - Conclusions & Summaries
 
-To recap, this room introduced you to the following topics:
+To recap, in this room the following topics were introduced:
 
 - Using terminal text editors
 - General utilities such as downloading and serving contents using a python webserver
