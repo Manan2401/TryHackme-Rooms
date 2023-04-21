@@ -9,7 +9,7 @@
 > No Answer Needed
 
 ---
-
+<br></br>
 ## Task 2 - Let's Learn About Crawlers
 
 > Q: 1. Name the key term of what a "crawler" is used to do.
@@ -28,12 +28,12 @@ Keywords
 ```
 
 ---
-
+<br></br>
 ## Task 3 - Enter: Search Engine Optimization
 
 > No Answer Needed
 ---
-
+<br></br>
 ## Task 4 - Beepboop - Robots.txt
 
 > Q: 1. Where would "robots.txt" be located on the domain "ablog.com"?
@@ -62,7 +62,7 @@ Disallow: /dont-index-me/
 ```
 
 ---
-
+<br></br>
 ## Task 5 - Sitemaps
 
 > Q: 1. What is the typical file structure of a sitemap?
@@ -81,7 +81,7 @@ route
 ```
 
 ---
-
+<br></br>
 ## Task 6 - What is Google Dorking?
 
 > Q: 1. What would be the format used to query the site "bbc.co.uk" about flood defences?
